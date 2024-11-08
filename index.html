@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Earbuds AR Model</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <!-- Main AR Model Viewer -->
+    <model-viewer src="assets/earbuds-main.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                  tone-mapping="neutral" poster="assets/poster.webp" shadow-intensity="0.64" shadow-softness="0.82"
+                  environment-image="assets/music_hall_01_1k.hdr" exposure="0.48">
+      
+      <!-- Hotspots with annotations -->
+      <button class="Hotspot" slot="hotspot-1" data-position="-2.085m 0.290m -0.310m" data-normal="0.998m -0.010m 0.053m">
+        <div class="HotspotAnnotation">Touch Sensor</div>
+      </button>
+      <button class="Hotspot" slot="hotspot-2" data-position="-2.845m 0.267m -0.457m" data-normal="0.555m 0.378m -0.740m">
+        <div class="HotspotAnnotation">Hi-Def Speaker</div>
+      </button>
+      <button class="Hotspot" slot="hotspot-3" data-position="-3.669m -0.792m 0.900m" data-normal="0.426m -0.269m -0.864m">
+        <div class="HotspotAnnotation">Titanium Charging Contacts</div>
+      </button>
+      
+      <!-- Progress bar for loading -->
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      
+      <!-- AR button with custom icon -->
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+          <img src="assets/ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+    
+    <!-- JavaScript Files for Interactivity and Animation -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/earbuds-animation_1.js"></script>
+    <script src="scripts/earbuds-animation_2.js"></script>
+    <script src="scripts/earbuds-animation_2_scrollTrigger.js"></script>
+  </body>
+</html>
+        
