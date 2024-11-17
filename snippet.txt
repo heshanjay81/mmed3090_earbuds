@@ -1,0 +1,18 @@
+<model-viewer src="earbuds-main - gltf.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.64" shadow-softness="0.82" environment-image="music_hall_01_1k.hdr" exposure="0.48">
+    <button class="Hotspot" slot="hotspot-1" data-position="-2.0855639892195166m 0.29032629570618035m -0.31073491398813674m" data-normal="0.9985338699887517m -0.010135878097251819m 0.053173061417265736m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Touch Sensor</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-2.844956987459699m 0.26667735560803163m -0.45756438613178796m" data-normal="0.555440877708826m 0.3781866234158737m -0.7405810618962311m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Hi-Def Speaker</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-3.669383128601978m -0.7918653549027365m 0.8999647487254917m" data-normal="0.4261461901516684m -0.26878321896756757m -0.8638026428650535m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Titanium Charging Contacts</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

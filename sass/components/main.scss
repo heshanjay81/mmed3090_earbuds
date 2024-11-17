@@ -1,0 +1,27 @@
+@import 'variables';
+
+// Reset and base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    min-height: 200vh;
+    background: $gradient-primary;
+    color: $text-light;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-xl;
+}
+
+// Import component styles
+@import 'landing';
+@import 'scroll-section';
+@import 'animations';

@@ -1,0 +1,62 @@
+#scroll-section {
+    background: $gradient-reverse;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .info-panel {
+        position: relative;
+        padding: $spacing-xl;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 1rem;
+        max-width: 400px;
+        margin: $spacing-xl 0 3rem;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: $spacing-xl;
+            background: $gradient-text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .view-item {
+        margin-bottom: $spacing-xl;
+        position: relative;
+        padding-left: 3rem;
+    }
+
+    .view-number {
+        position: absolute;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        background: $primary-color;
+        color: $background-dark;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .view-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .view-description {
+        color: $text-description;
+        line-height: 1.5;
+    }
+
+    .earbud-image {
+        max-width: 400px;
+        height: auto;
+        border-radius: 1rem;
+        cursor: grab;
+    }
+}

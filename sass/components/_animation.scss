@@ -1,0 +1,41 @@
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateZ(0);
+    }
+    50% {
+        transform: translateY(-20px) translateZ(50px);
+    }
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform $transition-speed $transition-ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 60%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity $transition-speed $transition-ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.product-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+    transition: transform $transition-speed $transition-ease;
+}

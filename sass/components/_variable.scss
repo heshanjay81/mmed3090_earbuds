@@ -1,0 +1,25 @@
+// Colors
+$primary-color: #00ff9d;
+$background-dark: #001e3c;
+$background-darker: #000b18;
+$text-light: #ffffff;
+$text-muted: #a0a0a0;
+$text-description: #b0b0b0;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $background-dark 0%, $background-darker 100%);
+$gradient-reverse: linear-gradient(135deg, $background-darker 0%, $background-dark 100%);
+$gradient-text: linear-gradient(90deg, $text-light, #7fffd4);
+
+// Spacing
+$spacing-sm: 0.875rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+
+// Animation
+$transition-speed: 0.3s;
+$transition-ease: ease;
