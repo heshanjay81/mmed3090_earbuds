@@ -65,7 +65,7 @@
         <section class="grid-con" style="display: inline;">
           <div class="xray-text col-span-full m-col-start-3 m-col-end-11">
             <h3>Discover the Inner Workings</h3>
-            <p>Use the slider below to reveal a detailed view of Harmony Pods' design and structure. Slide to see the intricate layers that make these earbuds both powerful and comfortable for any environment.</p>
+            <p>Use the slider below to reveal a detailed view of Heiwa Pods' design and structure. Slide to see the intricate layers that make these earbuds both powerful and comfortable for any environment.</p>
           </div>
           
           <div class="col-span-full m-col-start-2 m-col-end-12">
@@ -73,12 +73,33 @@
               <div id="xray">
                 <div id="divisor"></div>
               </div>
-              <input type="range" min="0" max="100" value="50" id="slider">
+              <input type="range" min="0" max="100" value="50" step="1" id="slider">
             </div>
           </div>
         </section>
       </section>
-
+     
+  
+    <script>
+      const slider = document.getElementById('slider');
+  
+      // Add event listener for slider movement
+      slider.addEventListener('input', () => {
+        // Constrain value within the min and max range
+        const value = Math.min(Math.max(slider.value, slider.min), slider.max);
+  
+        // Update slider background to reflect the percentage
+        const percentage = ((value - slider.min) / (slider.max - slider.min)) * 100;
+        slider.style.background = `linear-gradient(90deg, rgba(157, 28, 28, 0.3) ${percentage}%, rgba(255, 255, 255, 0.1) ${percentage}%)`;
+  
+        console.log(`Slider Value: ${value}`);
+      });
+  
+      // Ensure the final value is set correctly when sliding stops
+      slider.addEventListener('change', () => {
+        console.log(`Final Value: ${slider.value}`);
+      });
+    </script>
       <section id="scroll-con" style="height: 1000px;">
         <h2 class="ex_view" style="align-items: center;">Exploded View Feature</h2>
       
