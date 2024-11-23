@@ -31,6 +31,13 @@
     </section>
     
     <section>
+        <div>
+            <video controls style="width: 900px; padding-right: 30px;">
+              <source src="/images/promotional animation render.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
         <div class="info-panel">
             <h1>3D Earbud Display</h1>
             <div class="view-item">
@@ -52,7 +59,38 @@
        
       </section>
 
+      <section id="xray-con">
+        <h2 class="hidden">Xray slides</h2>
+  
+        <section class="grid-con" style="display: inline;">
+          <div class="xray-text col-span-full m-col-start-3 m-col-end-11">
+            <h3>Discover the Inner Workings</h3>
+            <p>Use the slider below to reveal a detailed view of Harmony Pods' design and structure. Slide to see the intricate layers that make these earbuds both powerful and comfortable for any environment.</p>
+          </div>
+          
+          <div class="col-span-full m-col-start-2 m-col-end-12">
+            <div id="comparison-con">
+              <div id="xray">
+                <div id="divisor"></div>
+              </div>
+              <input type="range" min="0" max="100" value="50" id="slider">
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="scroll-con" style="height: 1000px;">
+        <h2 class="ex_view" style="align-items: center;">Exploded View Feature</h2>
+      
+          <div class="col-span-full  "  style="height: max-content;">
+            <canvas id="explode-view"></canvas> 
+          </div>
+        </section>
+
       <script src="./js/main.js" type="module"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
 
 </body>
 </html>
