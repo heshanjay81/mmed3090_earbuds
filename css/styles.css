@@ -250,7 +250,7 @@ section {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  overflow: hidden;
+  
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -258,15 +258,17 @@ section {
 #xray {
   position: relative;
   height: 300px;
-  background: url('xray-bg.jpg') center center no-repeat; /* Placeholder */
+  background: url('../images/xray.png') center center no-repeat; /* Placeholder */
   background-size: cover;
 }
 
 #divisor {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 20%;
   background: rgba(0, 255, 157, 0.2);
+  background-image: url("../images/withbg.png");
+  background-size: cover;
   transition: width 0.3s ease;
 }
 
@@ -279,7 +281,34 @@ section {
   cursor: pointer;
   z-index: 10;
 }
+/* Slider Styling */
+input[type="range"] {
 
+  position: relative;
+  top: -14px;
+  width: 50%;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(157, 28, 28, 0.3), rgba(255, 255, 255, 0.1));
+  cursor: pointer;
+ 
+}
+input[type="range"]:hover {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+}
+input[type="range"]:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+}
+
+/* Hover Effects */
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:hover::-moz-range-thumb {
+  transform: scale(1.2);}
 /* Scroll Section */
 #scroll-con {
   padding: 2rem;

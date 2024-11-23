@@ -75,6 +75,17 @@ document.onmousemove = (e) => {
 
 animate();
 
+const divisor = document.querySelector("#divisor");
+const slider = document.querySelector("#slider");
+
+function moveDivisor() {
+    console.log(slider.value);
+    divisor.style.width = slider.value + "%";
+      
+}
+slider.addEventListener("input", moveDivisor);
+
+
 //Scroll-on-animation
 
 const canvas = document.querySelector("#explode-view");
